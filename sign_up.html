@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Website Notez</title>
+    <link rel="icon" href="images\n\res\mipmap-mdpi\n.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <link rel="stylesheet" href="css/master.css">
+    <style media="screen">
+    body{
+      background: url("images/night-sky3.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      color: white;
+    }
+    .forgot_pass{
+      width: 100%;
+    }
+    .btn-success{
+      width: 100%;
+      font-size: 110%;
+      font-weight: bold;
+      border-radius: 10 px;
+    }
+    .container{
+      margin-top: 25px;
+      margin-bottom: 35px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .container:hover{
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg nav_control">
+      <a href="index.html" class="navbar-brand"><img src="images\N\res\mipmap-xxhdpi\N.png" alt="" id="logo_image">Notez</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_links" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_links" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_links" href="sign_in.html">Sign in</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link navbar_links" href="sign_up.html">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class=""   method="post">
+              <p> <label for="username" class="label-control">Enter your email id</label> </p>
+              <input class="form-control" type="text" name="username" value="" id="username">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class=""   method="post">
+              <p> <label for="password" class="label-control">Enter password</label> </p>
+              <input class="form-control" type="password" name="password" value="" id="password">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class=""   method="post">
+              <p> <label for="confirm_password" class="label-control">Confirm password</label> </p>
+              <input class="form-control" type="password" name="password" value="" id="confirm_password">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class=""   method="post">
+              <p> <label for="security_ques" class="label-control">Enter security question</label> </p>
+              <input class="form-control" type="text" name="security_ques" value="" id="security_ques">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class=""   method="post">
+              <p> <label for="security_ques_ans" class="label-control">Enter answer for above question</label> </p>
+              <input class="form-control" type="text" name="security_ques_ans" value="" id="security_ques_ans">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+
+
+    </div>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row text-center" id="footer_content">
+          <div class="col-sm-12 col-lg-4">
+            <a href="index.html">Home&nbsp;<i class="fas fa-home"></i></a>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <a href="#">Sign in/up&nbsp;<i class="fas fa-sign-in-alt"></i></a>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <a href="#">Contact Us&nbsp;<i class="fab fa-contao"></i></a>
+          </div>
+        </div>
+        <div class="row text-center justify-content-center" id="social_icon">
+             <div class="col-12">
+               <i class="fab fa-facebook fa-2x" id="facebook"></i>&nbsp;&nbsp;&nbsp;
+               <i class="fab fa-twitter fa-2x" id="twitter"></i>&nbsp;&nbsp;&nbsp;
+               <i class="fab fa-github-square fa-2x" id="github"></i>&nbsp;&nbsp;&nbsp;
+               <i class="fab fa-whatsapp fa-2x" id="whatsapp"></i>
+             </div>
+        </div>
+      </div>
+    </footer>
+
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+</html>

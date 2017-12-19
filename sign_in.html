@@ -15,6 +15,26 @@
       background-attachment: fixed;
       color: white;
     }
+    .forgot_pass{
+      width: 100%;
+    }
+    .btn-success{
+      width: 100%;
+      font-size: 110%;
+      font-weight: bold;
+      border-radius: 10 px;
+    }
+    .container{
+      margin-top: 25px;
+      margin-bottom: 35px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .container:hover{
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
     </style>
   </head>
   <body>
@@ -25,7 +45,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
@@ -34,7 +54,7 @@
           <li class="nav-item">
             <a class="nav-link navbar_links" href="#">Contact Us</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link navbar_links" href="sign_in.html">Sign in</a>
           </li>
           <li class="nav-item">
@@ -45,33 +65,49 @@
     </nav>
 
     <div class="container">
-      <div class="jumbotron text-center gold_hover">
-        <h1>Write today to become inspiration<br/> for future generation.</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-lg-4 text-center gold_hover">
-          <i class="fas fa-lightbulb fa-5x"></i>
-          <h2>Think!</h2>
-          <p>Take a break,<br/>think an topic/subject or unique which is unique and impressive.</p>
-        </div>
-        <div class="col-sm-12 col-lg-4 text-center gold_hover">
-          <i class="fas fa-keyboard fa-5x"></i>
-          <h2>Type!</h2>
-          <p>Type your ideas in your own way,<br/>that can blow everyone's mind</p>
-        </div>
-        <div class="col-sm-12 col-lg-4 text-center gold_hover">
-          <i class="fas fa-share-alt fa-5x"></i>
-          <h2>Share!</h2>
-          <p>Share your ideas to build your career.</p>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class="" action="index.html" method="post">
+              <p> <label for="username" class="label-control">Enter your email id or username</label> </p>
+              <input class="form-control" type="text" name="username" value="" id="username">
+            </form>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 justify-content-center text-center">
-          <button type="button" name="get_started" class="btn btn-deafult" id="cust_button">Get Started</button>
-        </div>
-      </div>
-    </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <div class="form-group">
+            <form class="" action="index.html" method="post">
+              <p> <label for="password" class="label-control">Enter your password</label> </p>
+              <input class="form-control" type="password
 
+
+
+              " name="password" value="" id="password">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <p class="forgot_pass" >
+            <div class="form-inline text-left">
+              <input type="checkbox" name="remember_me_check" value="" id="remember_me_check">&nbsp;Remember Me:
+            </div>
+          </p>
+
+
+
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-lg-6">
+          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+        </div>
+      </div>
+
+    </div>
     <footer class="footer">
       <div class="container-fluid">
         <div class="row text-center" id="footer_content">
@@ -96,9 +132,10 @@
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
   </body>
 </html>
