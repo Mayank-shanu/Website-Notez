@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Website Notez</title>
+    <link rel="icon" href="images\n\res\mipmap-mdpi\n.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <style media="screen">
+      body{
+        background: url("images/night-sky3.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        color: white;
+      }
+      #logo_image{
+        width:32px;
+        height: 32px;
+        margin-right: 5px;
+      }
+      .nav_control{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+        opacity: .61;
+      }
+      .nav_control:hover{
+        opacity: .86;
+      }
+      .navbar-brand{
+        font-size: 180%;
+      }
+      .nav-link{
+        font-size: 110%;
+      }
+      .navbar-collapse ul li:hover{
+        border-bottom: 2px rgb(246, 144, 16) solid;
+      }
+      .navbar-collapse ul li a:hover{
+        color: rgb(180, 152, 31);
+      }
+      .jumbotron{
+        background-color: transparent;
+        color: rgba(#ffffff, 0.18);
+      }
+      .gold_hover:hover{
+        color: rgb(246, 144, 16);
+      }
+      .container div p{
+        font-size: 120%;
+      }
+      .container div i{
+        margin-bottom: 20px;
+      }
+      #cust_button{
+        border-radius: 15px;
+        width: 200px;
+        opacity: .7;
+        font-weight: bold;
+        font-size: 120%;
+      }
+      #cust_button:hover{
+        background: transparent;
+        color: rgb(246, 144, 16);
+        font-size: 200%;
+        transition: background .5s linear,font-size 1s linear;
+        opacity: 1;
+      }
+      .container-fluid{
+        margin-top: 20px;
+      }
+      .footer{
+        margin-top: 20px;
+        padding:10px;
+        background-color: #000;
+        opacity: .6;
+      }
+      .footer:hover{
+        opacity: .82;
+      }
+      .footer a{
+        font-size: 120%;
+        color: white;
+        padding-bottom: 20px;
+      }
+      .footer a:hover{
+        color: rgb(246, 144, 16);
+        text-decoration: none;
+      }
+      .footer .row{
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #facebook:hover{
+        color: rgb(25, 67, 193) ;
+      }
+      #whatsapp:hover{
+        color: #43D854;
+      }
+      #twitter:hover{
+        color:#55ACEF;
+      }
+      #github:hover{
+        color:white;
+      }
+      @media (max-width:480px) {
+        .gold_hover h1 {
+          font-size: 200%;
+        }
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg nav_control">
+      <a href="index.html" class="navbar-brand"><img src="images\N\res\mipmap-xxhdpi\N.png" alt="" id="logo_image">Notez</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_links" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_links" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navbar_links" href="#">Sign in</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="jumbotron text-center gold_hover">
+        <h1>Write today to become inspiration<br/> for future generation.</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 text-center gold_hover">
+          <i class="fas fa-lightbulb fa-5x"></i>
+          <h2>Think!</h2>
+          <p>Take a break,<br/>think an topic/subject or unique which is unique and impressive.</p>
+        </div>
+        <div class="col-sm-12 col-lg-4 text-center gold_hover">
+          <i class="fas fa-keyboard fa-5x"></i>
+          <h2>Type!</h2>
+          <p>Type your ideas in your own way,<br/>that can blow everyone's mind</p>
+        </div>
+        <div class="col-sm-12 col-lg-4 text-center gold_hover">
+          <i class="fas fa-share-alt fa-5x"></i>
+          <h2>Share!</h2>
+          <p>Share your ideas to build your career.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 justify-content-center text-center">
+          <button type="button" name="get_started" class="btn btn-deafult" id="cust_button">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row text-center" id="footer_content">
+          <div class="col-sm-12 col-lg-4">
+            <a href="index.html">Home&nbsp;<i class="fas fa-home"></i></a>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <a href="#">Sign in/up&nbsp;<i class="fas fa-sign-in-alt"></i></a>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <a href="#">Contact Us&nbsp;<i class="fab fa-contao"></i></a>
+          </div>
+        </div>
+        <div class="row text-center justify-content-center" id="social_icon">
+             <div class="col-12">
+               <i class="fab fa-facebook fa-2x" id="facebook"></i>&nbsp;&nbsp;&nbsp;
+               <i class="fab fa-twitter fa-2x" id="twitter"></i>&nbsp;&nbsp;&nbsp;
+               <i class="fab fa-github-square fa-2x" id="github"></i>&nbsp;&nbsp;&nbsp;
+               <i class="fab fa-whatsapp fa-2x" id="whatsapp"></i>
+             </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+</html>
