@@ -1,0 +1,104 @@
+body{
+  background: url("images/night-sky3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  color: white;
+}
+#logo_image{
+  width:32px;
+  height: 32px;
+  margin-right: 5px;
+}
+.nav_control{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  opacity: .61;
+}
+.nav_control:hover{
+  opacity: .86;
+}
+.navbar-brand{
+  font-size: 180%;
+}
+.nav-link{
+  font-size: 110%;
+}
+.navbar-collapse ul li:hover{
+  border-bottom: 2px rgb(246, 144, 16) solid;
+}
+.navbar-collapse ul li a:hover{
+  color: rgb(180, 152, 31);
+}
+.jumbotron{
+  background-color: transparent;
+  color: rgba(#ffffff, 0.18);
+}
+.gold_hover:hover{
+  color: rgb(246, 144, 16);
+}
+.container div p{
+  font-size: 120%;
+}
+.container div i{
+  margin-bottom: 20px;
+}
+#cust_button{
+  border-radius: 15px;
+  width: 200px;
+  opacity: .7;
+  font-weight: bold;
+  font-size: 120%;
+}
+#cust_button:hover{
+  background: transparent;
+  color: rgb(246, 144, 16);
+  font-size: 200%;
+  transition: background .5s linear,font-size 1s linear;
+  opacity: 1;
+}
+.container-fluid{
+  margin-top: 20px;
+}
+.footer{
+  margin-top: 20px;
+  padding:10px;
+  background-color: #000;
+  opacity: .6;
+}
+.footer:hover{
+  opacity: .82;
+}
+.footer a{
+  font-size: 120%;
+  color: white;
+  padding-bottom: 20px;
+}
+.footer a:hover{
+  color: rgb(246, 144, 16);
+  text-decoration: none;
+}
+.footer .row{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#facebook:hover{
+  color: rgb(25, 67, 193) ;
+}
+#whatsapp:hover{
+  color: #43D854;
+}
+#twitter:hover{
+  color:#55ACEF;
+}
+#github:hover{
+  color:white;
+}
+@media (max-width:480px) {
+  .gold_hover h1 {
+    font-size: 200%;
+  }
+
+
+}
