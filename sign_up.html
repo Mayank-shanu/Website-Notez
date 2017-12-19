@@ -34,6 +34,10 @@
     .container:hover{
       background-color: rgba(0, 0, 0, 0.7);
     }
+    .error{
+      margin-top: 7px;
+      color: rgb(200, 24, 39);
+    }
 
     </style>
   </head>
@@ -65,62 +69,59 @@
     </nav>
 
     <div class="container">
+      <form class=""  method="post" onsubmit="return validation()">
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class=""   method="post">
               <p> <label for="username" class="label-control">Enter your email id</label> </p>
-              <input class="form-control" type="text" name="username" value="" id="username">
-            </form>
+              <input class="form-control" type="email" name="username" value="" id="username">
+              <p id="username_error" class="error"></p>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class=""   method="post">
               <p> <label for="password" class="label-control">Enter password</label> </p>
               <input class="form-control" type="password" name="password" value="" id="password">
-            </form>
+              <p id="password_error" class="error"></p>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class=""   method="post">
               <p> <label for="confirm_password" class="label-control">Confirm password</label> </p>
               <input class="form-control" type="password" name="password" value="" id="confirm_password">
-            </form>
+              <p id="confirm_password_error" class="error"></p>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class=""   method="post">
               <p> <label for="security_ques" class="label-control">Enter security question</label> </p>
               <input class="form-control" type="text" name="security_ques" value="" id="security_ques">
-            </form>
+              <p id="security_ques_error" class="error"></p>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class=""   method="post">
               <p> <label for="security_ques_ans" class="label-control">Enter answer for above question</label> </p>
               <input class="form-control" type="text" name="security_ques_ans" value="" id="security_ques_ans">
-            </form>
+              <p id="security_ques_ans" class="error"></p>
+              <p id="security_ques_ans_error" class="error"></p>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
-          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+          <button type="submit" name="submit" class="btn btn-success" onclick="validation()">Submit</button>
         </div>
       </div>
-
+      </form>
 
     </div>
     <footer class="footer">
@@ -151,6 +152,59 @@
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+          <script type="text/javascript">
 
+            function validation() {
+              var email = document.getElementById('username').value;
+              var password = document.getElementById('password').value;
+              var confirm_password = document.getElementById('confirm_password').value;
+              var security_ques = document.getElementById('security_ques').value;
+              var security_ques_ans = document.getElementById('security_ques_ans').value;
+
+              var email_error = document.getElementById('username_error');
+              var password_error = document.getElementById('password_error');
+              var confirm_password_error = document.getElementById('confirm_password_error');
+              var security_ques_error = document.getElementById('security_ques_error');
+              var security_ques_ans_error = document.getElementById('security_ques_ans_error');
+
+              var check = true;
+
+              if(!email) {email_error.innerHTML = "enter your email id"; check=false;}
+              else {
+                email_error.innerHTML = "";
+              }
+
+              if(!security_ques){security_ques_error.innerHTML = "Enter your security question"; check=false;}
+              else {
+                security_ques_error.innerHTML = "";
+              }
+
+              if(!security_ques_ans){security_ques_ans_error.innerHTML = "Enter answer to your security question"; check=false;}
+              else {
+                security_ques_ans_error.innerHTML = "";
+              }
+
+              if(!password){password_error.innerHTML = "Enter Password"; check=false;}
+              else {
+                if(password.length<=5){password_error.innerHTML = "Password must have altest 6 characters"; check=false;}
+                else password_error.innerHTML="";
+              }
+
+              if(!confirm_password){confirm_password_error.innerHTML = "Enter confirm password";check=false;}
+              else {
+                if(confirm_password != password) {confirm_password_error.innerHTML = "Confirm password and password are different";check=false;}
+                else confirm_password_error.innerHTML = "";
+              }
+              return check;
+              // if(check){
+              //   return true;
+              // }
+              // else {
+              //   return false;
+              // }
+
+            }
+
+          </script>
   </body>
 </html>
