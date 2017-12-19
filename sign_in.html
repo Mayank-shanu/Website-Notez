@@ -34,6 +34,10 @@
     .container:hover{
       background-color: rgba(0, 0, 0, 0.7);
     }
+    .error{
+      margin-top: 15px;
+      color: rgb(200, 24, 39);
+    }
 
     </style>
   </head>
@@ -65,27 +69,22 @@
     </nav>
 
     <div class="container">
+      <form method="post" action="index.html" onsubmit="return validate()" id="sign_in_form">
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class="" action="index.html" method="post">
               <p> <label for="username" class="label-control">Enter your email id or username</label> </p>
               <input class="form-control" type="text" name="username" value="" id="username">
-            </form>
+              <p class="error" id="username_error"></p>
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-            <form class="" action="index.html" method="post">
               <p> <label for="password" class="label-control">Enter your password</label> </p>
-              <input class="form-control" type="password
-
-
-
-              " name="password" value="" id="password">
-            </form>
+              <input class="form-control" type="password" name="password" value="" id="password">
+              <p class="error" id="password_error"></p>
           </div>
         </div>
       </div>
@@ -96,17 +95,14 @@
               <input type="checkbox" name="remember_me_check" value="" id="remember_me_check">&nbsp;Remember Me:
             </div>
           </p>
-
-
-
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
-          <button type="submit" name="submit" class="btn btn-success">Submit</button>
+          <button type="submit" name="submit" class="btn btn-success" onclick="validate()">Submit</button>
         </div>
       </div>
-
+      </form>
     </div>
     <footer class="footer">
       <div class="container-fluid">
@@ -136,6 +132,42 @@
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+          <script type="text/javascript">
+            function validate() {
+              var username = document.getElementById('username').value;
+              var password = document.getElementById('password').value;
+              var username_error = document.getElementById('username_error');
+              var password_error = document.getElementById('password_error');
+              var check = true;
+              if(!username){
+                username_error.innerHTML = "Enter email id or username";
+                check = false;
+              }
+              else {
+                username_error.innerHTML = "";
+              }
+              if(!password){
+                password_error.innerHTML = "enter password";
+                check = false;
+              }
+              else {
+                if(password.length <=5){
+                  password_error.innerHTML = "password must have atlest 6 characters";
+                  check = false;
+                }
+                else {
+                  password_error.innerHTML = "";
+                }
+              }
+              if(check){
+                document.getElementById('sign_in_form').submit();
+
+              }
+              else {
+                return false;
+              }
+            }
+          </script>
 
   </body>
 </html>
