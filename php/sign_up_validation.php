@@ -12,7 +12,7 @@
   $securityAns = filter_var($securityAns,FILTER_SANITIZE_STRING);
 
   if($username && $password && $securityAns && $securityQues){
-    $link = mysqli_connect('localhost','******','******','******');
+    $link = mysqli_connect('localhost','*****','*****','*****');
     if(mysqli_connect_errno()>0){
       echo "
       <script type=\"text/javascript\">
