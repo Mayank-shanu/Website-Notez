@@ -16,7 +16,6 @@
         $q = "select * from user where email='$username' and password='$password'";
         $res = mysqli_query($link,$q);
         $no_of_rows = mysqli_num_rows($res);
-        //echo "no of rows $no_of_rows";
         if($no_of_rows == 0){
           echo "
           <script type=\"text/javascript\">
@@ -26,11 +25,10 @@
           ";
         }
         else {
-            echo "
-            <script type=\"text/javascript\">
-                  alert(\"sign in done\");
-            </script>
-            ";
+            session_start();
+            $_SESSION["username"] = "$username";
+            header('Location: home.php');
+
         }
       }
 

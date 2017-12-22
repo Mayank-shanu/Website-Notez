@@ -1,4 +1,6 @@
 <?php
+
+
   $username = $_POST["username"];
   $password = $_POST["password"];
   $securityQues = $_POST["security_ques"];
@@ -27,10 +29,13 @@
       if($num_rows == 0){
         $query = "insert into user (email,password,security_question,security_answer) values('$username','$password','$securityQues','$securityAns')";
         $result=mysqli_query($link,$query);
+
+            session_start();
+            $_SESSION["username"] = "$username";
+            header('Location: home.php');
         echo "
         <script type=\"text/javascript\">
-              alert(\"Sign up done , login to continue\");
-              window.location.href='../sign_in.html';
+              alert(\"Welcome to notez\");
         </script>
         ";
       }
