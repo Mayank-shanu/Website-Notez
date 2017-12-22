@@ -78,7 +78,7 @@
 
      <div class="container">
        <?php
-          $link=mysqli_connect("localhost","root","mayank@1998","master_notez");
+          $link=mysqli_connect("localhost","*****","*****","*****");
           if(mysqli_connect_errno()>0){
             echo "usable to conntect to database ".mysqli_connect_error();
           }
