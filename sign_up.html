@@ -39,6 +39,7 @@
       color: rgb(200, 24, 39);
     }
 
+
     </style>
   </head>
   <body>
@@ -100,8 +101,8 @@
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-              <p> <label for="security_ques" class="label-control">Enter security question</label> </p>
-              <input class="form-control" type="text" name="security_ques" value="" id="security_ques">
+              <p> <label for="security_ques" class="label-control">Enter security question <i>(maxlen 50)</i> </label> </p>
+              <input class="form-control" type="text" name="security_ques" value="" id="security_ques" maxlength="50">
               <p id="security_ques_error" class="error"></p>
           </div>
         </div>
@@ -109,9 +110,9 @@
       <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
           <div class="form-group">
-              <p> <label for="security_ques_ans" class="label-control">Enter answer for above question</label> </p>
-              <input class="form-control" type="text" name="security_ques_ans" value="" id="security_ques_ans">
-              <p id="security_ques_ans" class="error"></p>
+              <p> <label for="security_ques_ans" class="label-control">Enter answer for above question <i>(maxlen 30)</i> </label> </p>
+              <input class="form-control" type="text" name="security_ques_ans" value="" id="security_ques_ans" maxlength="30">
+              <!-- <p id="security_ques_ans" class="error"></p> -->
               <p id="security_ques_ans_error" class="error"></p>
           </div>
         </div>

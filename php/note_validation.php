@@ -6,7 +6,7 @@
   $title = filter_var($title,FILTER_SANITIZE_STRING);
 
   if($note && $title){
-    $link = mysqli_connect("localhost","*****","*****","*****");
+    $link = mysqli_connect("*****","*****","*****","*****");
 
     if (mysqli_connect_errno()>0) {
       echo "unable to connect to database";
@@ -24,8 +24,11 @@
       $id = $tab_name.$no_of_rows;
       // $q = "insert into $tab_name(note_id,title,note,sharestatus,likes,dislikes,view,date) values('$id','$title','$note','1','0','0','0','$date')";
       $q ="INSERT INTO ".$tab_name."(note_id,title,note,likes,dislikes,views,sharestatus,date) values ('$id','$title','$note','0','0','0','1','$date')";
+      $email = $_SESSION["username"];
+      $q2 ="INSERT INTO all_shared_notes(note_id,title,note,likes,dislikes,views,email,date) values ('$id','$title','$note','0','0','0','$email','$date')";
       $res = mysqli_query($link,$q);
-      if($res){
+      $res2 = mysqli_query($link,$q2);
+      if($res && $res2){
         echo "
         <script>
           window.location.href = 'home.php';

@@ -8,12 +8,13 @@
 
   if($username && $password){
 
-      $link = mysqli_connect("localhost","*****","*****","*****");
+      $link = mysqli_connect("*****","*****","*****","*****");
       if(mysqli_connect_errno()>0){
         echo "Error in connection";
       }
       else {
-        $q = "select * from user where email='$username' and password='$password'";
+         // and password='$password'
+        $q = "select * from user where email='$username'";
         $res = mysqli_query($link,$q);
         $no_of_rows = mysqli_num_rows($res);
         if($no_of_rows == 0){
@@ -25,10 +26,22 @@
           ";
         }
         else {
+            $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
+            $st_pass = $row["password"];
+            $password_verify = password_verify($password,$st_pass);
+            if($password_verify){
             session_start();
             $_SESSION["username"] = "$username";
             header('Location: home.php');
-
+            }
+            else {
+              echo "
+              <script type=\"text/javascript\">
+                    alert(\"incorrect email id or password\");
+                    window.location.href=\"../sign_in.html\";
+              </script>
+              ";
+            }
         }
       }
 

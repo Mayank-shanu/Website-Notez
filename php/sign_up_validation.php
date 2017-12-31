@@ -13,8 +13,11 @@
   $securityQues = filter_var($securityQues,FILTER_SANITIZE_STRING);
   $securityAns = filter_var($securityAns,FILTER_SANITIZE_STRING);
 
+  $password_hash = password_hash($password,PASSWORD_DEFAULT);
+  $securityAns_hash = password_hash($securityAns,PASSWORD_DEFAULT);
+
   if($username && $password && $securityAns && $securityQues){
-    $link = mysqli_connect('localhost','*****','*****','*****');
+    $link = mysqli_connect("*****","*****","*****","*****");
     if(mysqli_connect_errno()>0){
       echo "
       <script type=\"text/javascript\">
@@ -27,7 +30,7 @@
        $res = mysqli_query($link,$q);
        $num_rows = mysqli_num_rows($res);
       if($num_rows == 0){
-        $query = "insert into user (email,password,security_question,security_answer) values('$username','$password','$securityQues','$securityAns')";
+        $query = "insert into user (email,password,security_question,security_answer) values('$username','$password_hash','$securityQues','$securityAns_hash')";
         $result=mysqli_query($link,$query);
 
             session_start();
